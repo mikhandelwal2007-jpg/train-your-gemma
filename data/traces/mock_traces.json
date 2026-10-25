@@ -1,0 +1,173 @@
+[
+  {
+    "id": "trace_phys_001_flaw",
+    "problem_id": "prob_phys_001",
+    "model_id": "google/gemma-2-2b-it",
+    "adapter_version": null,
+    "steps": [
+      "Identify the formula for distance with constant speed: d = v * t.",
+      "Given velocity v = 15 m/s and time t = 12 s.",
+      "Calculate: d = 15 * 12 = 150 meters.",
+      "Conclude that the total distance traveled is 150 m."
+    ],
+    "final_answer": "150 m",
+    "is_final_correct": false,
+    "first_flaw_index": 2,
+    "flaw_type": "math_error",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_phys_001_flawless",
+    "problem_id": "prob_phys_001",
+    "model_id": "google/gemma-2-2b-it",
+    "adapter_version": null,
+    "steps": [
+      "Use the relation d = v * t for uniform motion.",
+      "Plug in velocity v = 15 m/s and duration t = 12 s.",
+      "Calculate 15 * 12 = 180 meters.",
+      "State the final displacement as 180 m."
+    ],
+    "final_answer": "180 m",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_phys_002_flaw",
+    "problem_id": "prob_phys_002",
+    "model_id": "google/gemma-2-2b-it",
+    "adapter_version": null,
+    "steps": [
+      "Recall that 1 km = 1000 m and 1 hour = 3600 seconds.",
+      "To convert km/h to m/s, multiply 72 by 3.6.",
+      "72 * 3.6 = 259.2 m/s.",
+      "The converted speed is 259.2 m/s."
+    ],
+    "final_answer": "259.2 m/s",
+    "is_final_correct": false,
+    "first_flaw_index": 1,
+    "flaw_type": "unit_slip",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_phys_002_flawless",
+    "problem_id": "prob_phys_002",
+    "model_id": "google/gemma-2-2b-it",
+    "adapter_version": null,
+    "steps": [
+      "To convert from km/h to m/s, divide by 3.6 (since 1000 m / 3600 s = 1/3.6).",
+      "Compute: 72 / 3.6.",
+      "72 / 3.6 = 20.",
+      "The speed is 20 m/s."
+    ],
+    "final_answer": "20 m/s",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_phys_003_flaw",
+    "problem_id": "prob_phys_003",
+    "model_id": "google/gemma-2-2b-it",
+    "adapter_version": null,
+    "steps": [
+      "Use Newton's second law: F_net = m * a.",
+      "Identify mass m = 4 kg and acceleration a = 3 m/s^2.",
+      "Calculate force: F_net = 4 / 3 = 1.33 N.",
+      "Therefore, the net force is 1.33 N."
+    ],
+    "final_answer": "1.33 N",
+    "is_final_correct": false,
+    "first_flaw_index": 2,
+    "flaw_type": "formula_inversion",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_phys_003_flawless",
+    "problem_id": "prob_phys_003",
+    "model_id": "google/gemma-2-2b-it",
+    "adapter_version": null,
+    "steps": [
+      "According to Newton's second law, net force F = m * a.",
+      "Substitute m = 4 kg and a = 3 m/s^2.",
+      "Evaluate: F = 4 * 3 = 12 N.",
+      "Final horizontal force is 12 N."
+    ],
+    "final_answer": "12 N",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_chart_vt_001_flaw",
+    "problem_id": "prob_chart_vt_001",
+    "model_id": "google/gemma-2-2b-it",
+    "adapter_version": null,
+    "steps": [
+      "Read velocity values from the graph at t = 0 s and t = 4 s.",
+      "At t = 0 s, velocity is 0 m/s. At t = 4 s, velocity reads 10 m/s.",
+      "Acceleration is change in velocity over time: (10 - 0) / 4 = 2.5 m/s^2.",
+      "The acceleration is 2.5 m/s^2."
+    ],
+    "final_answer": "2.5 m/s^2",
+    "is_final_correct": false,
+    "first_flaw_index": 1,
+    "flaw_type": "misread_graph",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_chart_vt_001_flawless",
+    "problem_id": "prob_chart_vt_001",
+    "model_id": "google/gemma-2-2b-it",
+    "adapter_version": null,
+    "steps": [
+      "Determine acceleration as slope of velocity-time curve: a = (v(4) - v(0)) / (4 - 0).",
+      "From graph, at t = 0 s, v = 0 m/s; at t = 4 s, v = 20 m/s.",
+      "Calculate delta v = 20 - 0 = 20 m/s, delta t = 4 s.",
+      "Compute: 20 / 4 = 5 m/s^2.",
+      "The hatchling acceleration is 5 m/s^2."
+    ],
+    "final_answer": "5 m/s^2",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_chart_fa_gold_flawless",
+    "problem_id": "prob_chart_fa_gold",
+    "model_id": "google/gemma-2-2b-it",
+    "adapter_version": null,
+    "steps": [
+      "Locate acceleration = 4 m/s^2 on the horizontal x-axis.",
+      "Move vertically to the data line and read the corresponding net force value on the y-axis.",
+      "The y-axis reads 10 N.",
+      "Conclusion: net force is 10 N."
+    ],
+    "final_answer": "10 N",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_phys_gold_001_flaw",
+    "problem_id": "prob_phys_gold_001",
+    "model_id": "google/gemma-2-2b-it",
+    "adapter_version": null,
+    "steps": [
+      "Convert meters to centimeters using 1 m = 100 cm.",
+      "To find cm in 2.5 meters, divide 2.5 by 100.",
+      "2.5 / 100 = 0.025 cm.",
+      "Final answer is 0.025 cm."
+    ],
+    "final_answer": "0.025 cm",
+    "is_final_correct": false,
+    "first_flaw_index": 1,
+    "flaw_type": "unit_slip",
+    "truth_source": "checker"
+  }
+]

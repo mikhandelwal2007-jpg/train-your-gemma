@@ -1,0 +1,33 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node & Vite Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Environment & Secrets (Section 11)
+.env
+*.secret
+
+# SQLite Databases & temporary data
+*.db
+*.db-wal
+*.db-shm
+data/*.db
+data/*.db-wal
+data/*.db-shm
+
+# OS & IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp

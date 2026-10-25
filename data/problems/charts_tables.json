@@ -1,0 +1,74 @@
+[
+  {
+    "id": "prob_chart_vt_001",
+    "subject": "chart_table",
+    "difficulty": "medium",
+    "statement": "Based on the velocity-time graph, what is the acceleration of the hatchling between t = 0 s and t = 4 s?",
+    "image_path": "data/images/chart_vt_flight.png",
+    "answer_key": "5 m/s^2",
+    "checker_type": "units",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "programmatic_matplotlib"
+  },
+  {
+    "id": "prob_chart_fa_001",
+    "subject": "chart_table",
+    "difficulty": "easy",
+    "statement": "Using the Net Force vs Acceleration plot, determine the mass of the hatchling armor (Slope = Mass in F = m * a).",
+    "image_path": "data/images/chart_force_acc.png",
+    "answer_key": "2.5 kg",
+    "checker_type": "units",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "programmatic_matplotlib"
+  },
+  {
+    "id": "prob_chart_en_001",
+    "subject": "chart_table",
+    "difficulty": "easy",
+    "statement": "According to the Energy Transformation bar chart, which category accounts for exactly 300 Joules of energy?",
+    "image_path": "data/images/chart_energy_bar.png",
+    "answer_key": "Potential",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "programmatic_matplotlib"
+  },
+  {
+    "id": "prob_chart_fa_gold",
+    "subject": "chart_table",
+    "difficulty": "easy",
+    "statement": "What is the net force required when acceleration is 4 m/s^2 on the Net Force vs Acceleration graph?",
+    "image_path": "data/images/chart_force_acc.png",
+    "answer_key": "10 N",
+    "checker_type": "units",
+    "split": "gold",
+    "license": "CC0-1.0",
+    "source": "programmatic_matplotlib"
+  },
+  {
+    "id": "prob_chart_vt_002",
+    "subject": "chart_table",
+    "difficulty": "hard",
+    "statement": "From the velocity-time graph, what total distance was covered by the hatchling from t = 0 s to t = 10 s?",
+    "image_path": "data/images/chart_vt_flight.png",
+    "answer_key": "160 m",
+    "checker_type": "units",
+    "split": "flight",
+    "license": "CC0-1.0",
+    "source": "programmatic_matplotlib"
+  },
+  {
+    "id": "prob_chart_en_flight",
+    "subject": "chart_table",
+    "difficulty": "medium",
+    "statement": "What is the total mechanical energy (Kinetic + Potential) shown in the Energy Transformation chart?",
+    "image_path": "data/images/chart_energy_bar.png",
+    "answer_key": "800 J",
+    "checker_type": "units",
+    "split": "flight",
+    "license": "CC0-1.0",
+    "source": "programmatic_matplotlib"
+  }
+]
