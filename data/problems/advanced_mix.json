@@ -1,0 +1,77 @@
+[
+  {
+    "id": "prob_adv_001", "subject": "algebra", "difficulty": "medium",
+    "statement": "If f(x) = 2x² - 3x + 1, find f(4).",
+    "image_path": null, "answer_key": "21", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_002", "subject": "arithmetic", "difficulty": "easy",
+    "statement": "A dragon collects 8 gems per day for 3 weeks. How many gems does it have?",
+    "image_path": null, "answer_key": "168", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_003", "subject": "algebra", "difficulty": "hard",
+    "statement": "Solve the system of equations: 2x + y = 10 and x - y = 2. What is x?",
+    "image_path": null, "answer_key": "4", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_004", "subject": "geometry", "difficulty": "medium",
+    "statement": "Find the volume of a cylinder with radius 3 cm and height 10 cm. Use π ≈ 3.14.",
+    "image_path": null, "answer_key": "282.6 cm³", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_005", "subject": "probability", "difficulty": "medium",
+    "statement": "A jar has 4 red, 6 blue, and 5 green marbles. What is the probability of picking a blue marble?",
+    "image_path": null, "answer_key": "2/5", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_006", "subject": "algebra", "difficulty": "easy",
+    "statement": "What is the value of 5! (5 factorial)?",
+    "image_path": null, "answer_key": "120", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_007", "subject": "geometry", "difficulty": "easy",
+    "statement": "Find the perimeter of a rectangle with length 12 cm and width 5 cm.",
+    "image_path": null, "answer_key": "34 cm", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_008", "subject": "logic", "difficulty": "medium",
+    "statement": "In a class of 30 students, 18 play football and 14 play cricket. If 6 play both, how many play neither?",
+    "image_path": null, "answer_key": "4", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_009", "subject": "algebra", "difficulty": "hard",
+    "statement": "What is the sum of an infinite geometric series with first term 8 and common ratio 1/2?",
+    "image_path": null, "answer_key": "16", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_010", "subject": "arithmetic", "difficulty": "medium",
+    "statement": "A dragon's weight increases by 20% each year. If it weighs 50 kg now, how much will it weigh after 2 years?",
+    "image_path": null, "answer_key": "72", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_011", "subject": "geometry", "difficulty": "hard",
+    "statement": "Two sides of a triangle are 7 cm and 10 cm with an included angle of 90°. Find the area.",
+    "image_path": null, "answer_key": "35 cm²", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_012", "subject": "logic", "difficulty": "hard",
+    "statement": "How many 3-digit numbers can be formed using digits 1, 2, 3, 4, 5 without repetition?",
+    "image_path": null, "answer_key": "60", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_013", "subject": "algebra", "difficulty": "medium",
+    "statement": "Simplify: √(144) + √(81) - √(25)",
+    "image_path": null, "answer_key": "16", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_014", "subject": "arithmetic", "difficulty": "easy",
+    "statement": "What is the LCM of 12 and 18?",
+    "image_path": null, "answer_key": "36", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  },
+  {
+    "id": "prob_adv_015", "subject": "probability", "difficulty": "hard",
+    "statement": "In how many ways can 5 people be seated around a circular table?",
+    "image_path": null, "answer_key": "24", "checker_type": "exact", "split": "play", "license": "CC0-1.0", "source": "original"
+  }
+]

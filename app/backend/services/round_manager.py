@@ -26,6 +26,7 @@ def get_or_create_next_round(session: Session, player_id: str) -> Optional[Dict[
     2. Sprinkles gold traces roughly 1 in 8 rounds (Section 7).
     3. Balances flawed (~55%) and flawless (~45%) traces without revealing the ratio.
     4. Guarantees held-out flight problems are NEVER chosen.
+    5. NEVER repeats the same problem — tracks by problem_id, not just trace_id.
     """
     # Check if there is an active unsubmitted trace for this player
     if player_id in _active_rounds:
@@ -48,30 +49,41 @@ def get_or_create_next_round(session: Session, player_id: str) -> Optional[Dict[
         session.exec(select(Label.trace_id).where(Label.player_id == player_id)).all()
     )
 
+    # Build set of PROBLEM IDs the player has already seen (via any trace)
+    seen_problem_ids: set = set()
+    if labeled_trace_ids:
+        for tid in labeled_trace_ids:
+            t = session.exec(select(Trace).where(Trace.id == tid)).first()
+            if t:
+                seen_problem_ids.add(t.problem_id)
+
     # Check gold sprinkling: roughly 1 in 8 rounds
     label_count = len(labeled_trace_ids)
     is_gold_round = (label_count > 0 and label_count % 8 == 0)
 
     target_split = ProblemSplit.GOLD if is_gold_round else ProblemSplit.PLAY
 
-    # Fetch eligible problems in the target split
+    # Fetch eligible problems in the target split — exclude already-seen problems
     eligible_problems = session.exec(
         select(Problem).where(
             Problem.split == target_split,
             Problem.status == ProblemStatus.ACTIVE,
         )
     ).all()
+    eligible_problems = [p for p in eligible_problems if p.id not in seen_problem_ids]
 
     if not eligible_problems:
-        # Fallback to play split if gold split is empty or vice versa
+        # Fallback to play split if gold split is empty
         eligible_problems = session.exec(
             select(Problem).where(
                 Problem.split == ProblemSplit.PLAY,
                 Problem.status == ProblemStatus.ACTIVE,
             )
         ).all()
+        eligible_problems = [p for p in eligible_problems if p.id not in seen_problem_ids]
 
     if not eligible_problems:
+        # All problems exhausted — return None (no repeats)
         return None
 
     # Pick candidate problem
@@ -88,38 +100,20 @@ def get_or_create_next_round(session: Session, player_id: str) -> Optional[Dict[
             select(Trace).where(Trace.problem_id == prob.id)
         ).all()
 
-        unseen_traces = [t for t in traces if t.id not in labeled_trace_ids]
-        if not unseen_traces:
+        if not traces:
             continue
 
         # Filter by preference if possible
-        matched_traces = [t for t in unseen_traces if (t.first_flaw_index is not None) == prefer_flawed]
+        matched_traces = [t for t in traces if (t.first_flaw_index is not None) == prefer_flawed]
         if matched_traces:
             chosen_trace = random.choice(matched_traces)
         else:
-            chosen_trace = random.choice(unseen_traces)
+            chosen_trace = random.choice(traces)
 
         chosen_problem = prob
         break
 
-    # If all traces seen, allow replaying with any unseen trace from play split
-    if not chosen_trace:
-        all_play_problems = session.exec(
-            select(Problem).where(
-                Problem.split.in_([ProblemSplit.PLAY, ProblemSplit.GOLD]),
-                Problem.status == ProblemStatus.ACTIVE,
-            )
-        ).all()
-        for prob in all_play_problems:
-            traces = session.exec(select(Trace).where(Trace.problem_id == prob.id)).all()
-            unseen = [t for t in traces if t.id not in labeled_trace_ids]
-            if unseen:
-                chosen_trace = random.choice(unseen)
-                chosen_problem = prob
-                break
-
     if not chosen_trace or not chosen_problem:
-        # Gracefully handle when all problem/trace pairs are exhausted
         return None
 
     _active_rounds[player_id] = chosen_trace.id

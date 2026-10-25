@@ -1,0 +1,203 @@
+[
+  {
+    "id": "trace_logic_001_flaw",
+    "problem_id": "prob_logic_001",
+    "model_id": "gemma4",
+    "steps": [
+      "Premise 1: All cats are animals.",
+      "Premise 2: Some animals are pets.",
+      "Since all cats are animals and some animals are pets, all cats must be pets.",
+      "The answer is: Yes."
+    ],
+    "final_answer": "Yes",
+    "is_final_correct": false,
+    "first_flaw_index": 2,
+    "flaw_type": "logical_fallacy",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_logic_001_flawless",
+    "problem_id": "prob_logic_001",
+    "model_id": "gemma4",
+    "steps": [
+      "Premise 1: All cats are animals. This means the set of cats is a subset of animals.",
+      "Premise 2: Some animals are pets. This doesn't specify which animals.",
+      "The 'some animals' that are pets might not include cats at all.",
+      "This is a syllogistic fallacy — we cannot conclude all cats are pets.",
+      "The answer is: No."
+    ],
+    "final_answer": "No",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_logic_002_flaw",
+    "problem_id": "prob_logic_002",
+    "model_id": "gemma4",
+    "steps": [
+      "The dragon lies on Mondays and tells the truth on other days.",
+      "If the dragon says 'Yesterday I lied' on Wednesday, yesterday was Tuesday.",
+      "On Tuesday the dragon tells the truth, so saying 'I lied yesterday' would be false.",
+      "Let's try Monday: the dragon lies on Monday, so 'yesterday I lied' would be a lie. Yesterday was Sunday, and on Sunday the dragon tells truth. So the lie works.",
+      "The answer is Monday."
+    ],
+    "final_answer": "Monday",
+    "is_final_correct": false,
+    "first_flaw_index": 4,
+    "flaw_type": "logical_fallacy",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_logic_002_flawless",
+    "problem_id": "prob_logic_002",
+    "model_id": "gemma4",
+    "steps": [
+      "The dragon lies only on Mondays and tells the truth every other day.",
+      "We need the dragon to say 'Yesterday I lied' truthfully.",
+      "For the statement to be true, yesterday the dragon must have actually lied, meaning yesterday was Monday.",
+      "If yesterday was Monday, today must be Tuesday.",
+      "On Tuesday the dragon tells the truth, so the statement 'Yesterday I lied' would indeed be truthful.",
+      "The answer is Tuesday."
+    ],
+    "final_answer": "Tuesday",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_logic_003_flaw",
+    "problem_id": "prob_logic_003",
+    "model_id": "gemma4",
+    "steps": [
+      "Total outcomes when rolling two dice: 6 × 6 = 36.",
+      "Pairs that sum to 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1), (3,4). That's 7 pairs.",
+      "Probability = 7/36.",
+      "The probability is 7/36."
+    ],
+    "final_answer": "7/36",
+    "is_final_correct": false,
+    "first_flaw_index": 1,
+    "flaw_type": "counting_error",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_logic_003_flawless",
+    "problem_id": "prob_logic_003",
+    "model_id": "gemma4",
+    "steps": [
+      "Total possible outcomes for two dice: 6 × 6 = 36.",
+      "Favorable outcomes summing to 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) — that's 6 pairs.",
+      "Probability = 6/36 = 1/6.",
+      "The probability is 1/6."
+    ],
+    "final_answer": "1/6",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_logic_004_flaw",
+    "problem_id": "prob_logic_004",
+    "model_id": "gemma4",
+    "steps": [
+      "Given: If it is raining → ground is wet.",
+      "We observe: the ground is wet.",
+      "Since rain causes wet ground and the ground is wet, it must be raining.",
+      "Conclusion: Yes, we can conclude it is raining."
+    ],
+    "final_answer": "Yes",
+    "is_final_correct": false,
+    "first_flaw_index": 2,
+    "flaw_type": "logical_fallacy",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_logic_004_flawless",
+    "problem_id": "prob_logic_004",
+    "model_id": "gemma4",
+    "steps": [
+      "The conditional states: Rain → Wet ground.",
+      "We know the ground is wet (the consequent is true).",
+      "However, affirming the consequent is a logical fallacy — the ground could be wet from a sprinkler, spilled water, etc.",
+      "We cannot logically conclude that it is raining.",
+      "The answer is: No."
+    ],
+    "final_answer": "No",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_logic_005_flaw",
+    "problem_id": "prob_logic_005",
+    "model_id": "gemma4",
+    "steps": [
+      "Total balls: 5 red + 3 blue = 8.",
+      "P(first red) = 5/8.",
+      "After drawing one red, remaining: 4 red + 3 blue = 7 total.",
+      "P(second red) = 4/8 = 1/2.",
+      "P(both red) = 5/8 × 1/2 = 5/16.",
+      "The probability is 5/16."
+    ],
+    "final_answer": "5/16",
+    "is_final_correct": false,
+    "first_flaw_index": 3,
+    "flaw_type": "math_error",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_logic_005_flawless",
+    "problem_id": "prob_logic_005",
+    "model_id": "gemma4",
+    "steps": [
+      "Total balls: 5 red + 3 blue = 8.",
+      "P(first ball is red) = 5/8.",
+      "After drawing one red: 4 red + 3 blue = 7 remaining.",
+      "P(second ball is red | first was red) = 4/7.",
+      "P(both red) = 5/8 × 4/7 = 20/56 = 5/14.",
+      "The probability is 5/14."
+    ],
+    "final_answer": "5/14",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_logic_gold_001_flawless",
+    "problem_id": "prob_logic_gold_001",
+    "model_id": "gemma4",
+    "steps": [
+      "A implies B means whenever A is true, B must be true.",
+      "B implies C means whenever B is true, C must be true.",
+      "So if A is true → B is true → C is true.",
+      "By transitivity, A implies C. The answer is Yes."
+    ],
+    "final_answer": "Yes",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_logic_gold_002_flaw",
+    "problem_id": "prob_logic_gold_002",
+    "model_id": "gemma4",
+    "steps": [
+      "3 coin tosses → 2³ = 8 total outcomes.",
+      "Ways to get exactly 2 heads: HHT, HTH, THH, HHH. That's 4.",
+      "P = 4/8 = 1/2.",
+      "The probability is 1/2."
+    ],
+    "final_answer": "1/2",
+    "is_final_correct": false,
+    "first_flaw_index": 1,
+    "flaw_type": "counting_error",
+    "truth_source": "checker"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "prob_math_001",
+    "subject": "algebra",
+    "difficulty": "easy",
+    "statement": "Solve for x: 3x + 7 = 22",
+    "image_path": null,
+    "answer_key": "5",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_math_002",
+    "subject": "algebra",
+    "difficulty": "easy",
+    "statement": "Simplify the expression: 4(2x - 3) + 5x",
+    "image_path": null,
+    "answer_key": "13x - 12",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_math_003",
+    "subject": "algebra",
+    "difficulty": "medium",
+    "statement": "Find the roots of the quadratic equation: x² - 5x + 6 = 0",
+    "image_path": null,
+    "answer_key": "x = 2 and x = 3",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_math_004",
+    "subject": "arithmetic",
+    "difficulty": "easy",
+    "statement": "A dragon hoards 240 gold coins. If it spends 15% on food, how many coins does it have left?",
+    "image_path": null,
+    "answer_key": "204",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_math_005",
+    "subject": "arithmetic",
+    "difficulty": "medium",
+    "statement": "What is the sum of the first 20 natural numbers?",
+    "image_path": null,
+    "answer_key": "210",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_math_006",
+    "subject": "algebra",
+    "difficulty": "hard",
+    "statement": "If log₂(x) = 5, what is the value of x?",
+    "image_path": null,
+    "answer_key": "32",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_math_007",
+    "subject": "geometry",
+    "difficulty": "easy",
+    "statement": "Find the area of a circle with radius 7 cm. Use π = 22/7.",
+    "image_path": null,
+    "answer_key": "154 cm²",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_math_008",
+    "subject": "geometry",
+    "difficulty": "medium",
+    "statement": "A right triangle has legs of 5 cm and 12 cm. What is the length of the hypotenuse?",
+    "image_path": null,
+    "answer_key": "13 cm",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_math_009",
+    "subject": "algebra",
+    "difficulty": "medium",
+    "statement": "Find the 10th term of the arithmetic sequence: 3, 7, 11, 15, ...",
+    "image_path": null,
+    "answer_key": "39",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_math_010",
+    "subject": "algebra",
+    "difficulty": "hard",
+    "statement": "Evaluate: 2⁸ ÷ 2³ × 2²",
+    "image_path": null,
+    "answer_key": "128",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  }
+]

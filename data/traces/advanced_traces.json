@@ -1,0 +1,152 @@
+[
+  {
+    "id": "trace_adv_001_flaw", "problem_id": "prob_adv_001", "model_id": "gemma4",
+    "steps": ["Substitute x=4 into f(x) = 2x² - 3x + 1.", "f(4) = 2(4²) - 3(4) + 1 = 2(16) - 12 + 1.", "= 32 - 12 + 1 = 19.", "The answer is 19."],
+    "final_answer": "19", "is_final_correct": false, "first_flaw_index": 2, "flaw_type": "math_error", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_001_ok", "problem_id": "prob_adv_001", "model_id": "gemma4",
+    "steps": ["f(x) = 2x² - 3x + 1. Plug in x = 4.", "f(4) = 2(16) - 3(4) + 1 = 32 - 12 + 1.", "= 21.", "f(4) = 21."],
+    "final_answer": "21", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_002_flaw", "problem_id": "prob_adv_002", "model_id": "gemma4",
+    "steps": ["3 weeks = 21 days.", "8 gems/day × 21 days.", "8 × 21 = 148.", "The dragon has 148 gems."],
+    "final_answer": "148", "is_final_correct": false, "first_flaw_index": 2, "flaw_type": "math_error", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_002_ok", "problem_id": "prob_adv_002", "model_id": "gemma4",
+    "steps": ["3 weeks = 3 × 7 = 21 days.", "Total gems = 8 × 21 = 168.", "The dragon has 168 gems."],
+    "final_answer": "168", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_003_flaw", "problem_id": "prob_adv_003", "model_id": "gemma4",
+    "steps": ["From 2x + y = 10 and x - y = 2.", "Add the equations: 2x + y + x - y = 10 + 2 → 3x = 12.", "x = 12 / 3 = 3.", "x = 3."],
+    "final_answer": "3", "is_final_correct": false, "first_flaw_index": 2, "flaw_type": "math_error", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_003_ok", "problem_id": "prob_adv_003", "model_id": "gemma4",
+    "steps": ["Add the two equations: (2x + y) + (x - y) = 10 + 2.", "3x = 12.", "x = 4.", "Verify: 2(4) + y = 10 → y = 2. And 4 - 2 = 2. ✓"],
+    "final_answer": "4", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_004_flaw", "problem_id": "prob_adv_004", "model_id": "gemma4",
+    "steps": ["Volume of cylinder = πr²h.", "r = 3 cm, h = 10 cm.", "V = 3.14 × 3 × 10 = 94.2 cm³.", "The volume is 94.2 cm³."],
+    "final_answer": "94.2 cm³", "is_final_correct": false, "first_flaw_index": 2, "flaw_type": "missing_square", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_004_ok", "problem_id": "prob_adv_004", "model_id": "gemma4",
+    "steps": ["V = πr²h. r = 3 cm, h = 10 cm.", "r² = 9. V = 3.14 × 9 × 10.", "V = 3.14 × 90 = 282.6 cm³.", "The volume is 282.6 cm³."],
+    "final_answer": "282.6 cm³", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_005_flaw", "problem_id": "prob_adv_005", "model_id": "gemma4",
+    "steps": ["Total marbles: 4 + 6 + 5 = 15.", "Blue marbles: 6.", "P(blue) = 6/15 = 3/5.", "The probability is 3/5."],
+    "final_answer": "3/5", "is_final_correct": false, "first_flaw_index": 2, "flaw_type": "math_error", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_005_ok", "problem_id": "prob_adv_005", "model_id": "gemma4",
+    "steps": ["Total = 4 + 6 + 5 = 15 marbles.", "P(blue) = 6/15.", "Simplify: 6/15 = 2/5.", "The probability is 2/5."],
+    "final_answer": "2/5", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_006_flaw", "problem_id": "prob_adv_006", "model_id": "gemma4",
+    "steps": ["5! = 5 × 4 × 3 × 2 × 1.", "= 5 × 4 = 20.", "20 × 3 = 60.", "60 × 2 = 120. Wait, 60 × 2 = 110. Then 110 × 1 = 110.", "5! = 110."],
+    "final_answer": "110", "is_final_correct": false, "first_flaw_index": 3, "flaw_type": "math_error", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_006_ok", "problem_id": "prob_adv_006", "model_id": "gemma4",
+    "steps": ["5! = 5 × 4 × 3 × 2 × 1.", "5 × 4 = 20. 20 × 3 = 60.", "60 × 2 = 120. 120 × 1 = 120.", "5! = 120."],
+    "final_answer": "120", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_007_flaw", "problem_id": "prob_adv_007", "model_id": "gemma4",
+    "steps": ["Perimeter of rectangle = 2(l + w).", "l = 12, w = 5.", "P = 2(12 + 5) = 2 × 17 = 32 cm.", "Perimeter is 32 cm."],
+    "final_answer": "32 cm", "is_final_correct": false, "first_flaw_index": 2, "flaw_type": "math_error", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_007_ok", "problem_id": "prob_adv_007", "model_id": "gemma4",
+    "steps": ["P = 2(l + w) = 2(12 + 5).", "= 2 × 17 = 34 cm.", "The perimeter is 34 cm."],
+    "final_answer": "34 cm", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_008_flaw", "problem_id": "prob_adv_008", "model_id": "gemma4",
+    "steps": ["Using inclusion-exclusion: |F ∪ C| = |F| + |C| - |F ∩ C|.", "= 18 + 14 - 6 = 26.", "Neither = 30 - 26 = 6.", "4 students play neither. Wait, 30 - 26 = 6. So 6."],
+    "final_answer": "6", "is_final_correct": false, "first_flaw_index": 3, "flaw_type": "math_error", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_008_ok", "problem_id": "prob_adv_008", "model_id": "gemma4",
+    "steps": ["|F ∪ C| = 18 + 14 - 6 = 26.", "Students playing at least one = 26.", "Neither = 30 - 26 = 4.", "4 students play neither."],
+    "final_answer": "4", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_009_flaw", "problem_id": "prob_adv_009", "model_id": "gemma4",
+    "steps": ["Sum of infinite GP = a / (1 - r) where |r| < 1.", "a = 8, r = 1/2.", "S = 8 / (1 - 1/2) = 8 / 2 = 4.", "Wait, 1 - 1/2 = 1/2. So S = 8 × 2 = 12. Hmm, let me recalculate. S = 8 / 0.5.", "Actually 8 / 0.5... that's 8 × 1/2 = 4. The sum is 4."],
+    "final_answer": "4", "is_final_correct": false, "first_flaw_index": 4, "flaw_type": "math_error", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_009_ok", "problem_id": "prob_adv_009", "model_id": "gemma4",
+    "steps": ["For |r| < 1, sum = a/(1-r).", "a = 8, r = 1/2.", "S = 8 / (1 - 0.5) = 8 / 0.5 = 16.", "The sum is 16."],
+    "final_answer": "16", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_010_flaw", "problem_id": "prob_adv_010", "model_id": "gemma4",
+    "steps": ["20% increase each year. Start: 50 kg.", "After year 1: 50 + 20% = 50 + 10 = 60 kg.", "After year 2: 60 + 20% of 50 = 60 + 10 = 70 kg.", "Weight after 2 years: 70 kg."],
+    "final_answer": "70", "is_final_correct": false, "first_flaw_index": 2, "flaw_type": "math_error", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_010_ok", "problem_id": "prob_adv_010", "model_id": "gemma4",
+    "steps": ["Year 1: 50 × 1.20 = 60 kg.", "Year 2: 60 × 1.20 = 72 kg.", "Weight after 2 years: 72 kg."],
+    "final_answer": "72", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_011_flaw", "problem_id": "prob_adv_011", "model_id": "gemma4",
+    "steps": ["Area = (1/2) × a × b × sin(C).", "a = 7, b = 10, C = 90°, sin(90°) = 1.", "Area = 7 × 10 × 1 = 70 cm².", "The area is 70 cm²."],
+    "final_answer": "70 cm²", "is_final_correct": false, "first_flaw_index": 2, "flaw_type": "missing_constant", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_011_ok", "problem_id": "prob_adv_011", "model_id": "gemma4",
+    "steps": ["Area = (1/2) × base × height for a right triangle.", "(1/2) × 7 × 10 = 35 cm².", "The area is 35 cm²."],
+    "final_answer": "35 cm²", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_012_flaw", "problem_id": "prob_adv_012", "model_id": "gemma4",
+    "steps": ["3-digit numbers from {1,2,3,4,5} without repetition.", "First digit: 5 choices. Second digit: 5 choices. Third digit: 5 choices.", "Total = 5 × 5 × 5 = 125.", "125 three-digit numbers."],
+    "final_answer": "125", "is_final_correct": false, "first_flaw_index": 1, "flaw_type": "logical_fallacy", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_012_ok", "problem_id": "prob_adv_012", "model_id": "gemma4",
+    "steps": ["Without repetition: first digit has 5 choices.", "Second digit: 4 remaining. Third: 3 remaining.", "Total = 5 × 4 × 3 = 60.", "60 three-digit numbers."],
+    "final_answer": "60", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_013_flaw", "problem_id": "prob_adv_013", "model_id": "gemma4",
+    "steps": ["√144 = 12, √81 = 9, √25 = 5.", "12 + 9 - 5.", "= 21 - 5 = 14.", "The answer is 14."],
+    "final_answer": "14", "is_final_correct": false, "first_flaw_index": 2, "flaw_type": "math_error", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_013_ok", "problem_id": "prob_adv_013", "model_id": "gemma4",
+    "steps": ["√144 = 12. √81 = 9. √25 = 5.", "12 + 9 = 21. Then 21 - 5 = 16.", "The answer is 16."],
+    "final_answer": "16", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_014_flaw", "problem_id": "prob_adv_014", "model_id": "gemma4",
+    "steps": ["Find LCM of 12 and 18.", "12 = 2² × 3. 18 = 2 × 3².", "LCM = 2 × 3 = 6.", "LCM is 6."],
+    "final_answer": "6", "is_final_correct": false, "first_flaw_index": 2, "flaw_type": "formula_inversion", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_014_ok", "problem_id": "prob_adv_014", "model_id": "gemma4",
+    "steps": ["12 = 2² × 3. 18 = 2 × 3².", "LCM = highest powers: 2² × 3² = 4 × 9 = 36.", "LCM(12, 18) = 36."],
+    "final_answer": "36", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_015_flaw", "problem_id": "prob_adv_015", "model_id": "gemma4",
+    "steps": ["Circular permutations of n people = n!.", "For 5 people: 5! = 120.", "120 ways to seat them."],
+    "final_answer": "120", "is_final_correct": false, "first_flaw_index": 0, "flaw_type": "formula_inversion", "truth_source": "checker"
+  },
+  {
+    "id": "trace_adv_015_ok", "problem_id": "prob_adv_015", "model_id": "gemma4",
+    "steps": ["Circular permutations = (n-1)!.", "For n = 5: (5-1)! = 4! = 24.", "24 ways to seat 5 people in a circle."],
+    "final_answer": "24", "is_final_correct": true, "first_flaw_index": null, "flaw_type": null, "truth_source": "checker"
+  }
+]

@@ -1,0 +1,165 @@
+[
+  {
+    "id": "trace_phys_004_flaw",
+    "problem_id": "prob_phys_004",
+    "model_id": "gemma4",
+    "steps": [
+      "Work done = Force × distance = m × g × h.",
+      "Mass m = 50 kg, g = 9.8 m/s², height h = 4 m.",
+      "W = 50 × 9.8 × 4 = 50 × 39.2 = 1860 J.",
+      "The work done is 1860 J."
+    ],
+    "final_answer": "1860 J",
+    "is_final_correct": false,
+    "first_flaw_index": 2,
+    "flaw_type": "math_error",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_phys_004_flawless",
+    "problem_id": "prob_phys_004",
+    "model_id": "gemma4",
+    "steps": [
+      "Work done against gravity: W = mgh.",
+      "m = 50 kg, g = 9.8 m/s², h = 4 m.",
+      "W = 50 × 9.8 × 4 = 1960 J.",
+      "The work done on the boulder is 1960 J."
+    ],
+    "final_answer": "1960 J",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_phys_005_flaw",
+    "problem_id": "prob_phys_005",
+    "model_id": "gemma4",
+    "steps": [
+      "Use kinematics: v = u + at.",
+      "Initial velocity u = 2 m/s (downward), a = 9.8 m/s², t = 3 s.",
+      "v = 2 + 9.8 × 3 = 2 + 29.4 = 29.4 m/s.",
+      "Wait, let me reconsider. The initial velocity is upward so u = -2 m/s.",
+      "v = -2 + 29.4 = 27.4 m/s.",
+      "Final velocity is 27.4 m/s."
+    ],
+    "final_answer": "27.4 m/s",
+    "is_final_correct": false,
+    "first_flaw_index": 3,
+    "flaw_type": "sign_error",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_phys_005_flawless",
+    "problem_id": "prob_phys_005",
+    "model_id": "gemma4",
+    "steps": [
+      "Using v = u + at for downward motion.",
+      "u = 2 m/s (initial downward), a = 9.8 m/s² (gravity), t = 3 s.",
+      "v = 2 + 9.8 × 3 = 2 + 29.4 = 31.4 m/s.",
+      "The final velocity is 31.4 m/s."
+    ],
+    "final_answer": "31.4 m/s",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_phys_006_flaw",
+    "problem_id": "prob_phys_006",
+    "model_id": "gemma4",
+    "steps": [
+      "Kinetic energy is the energy of a moving object.",
+      "The formula involves mass and velocity.",
+      "KE = m × v².",
+      "So the relation is KE = mv²."
+    ],
+    "final_answer": "m * v**2",
+    "is_final_correct": false,
+    "first_flaw_index": 2,
+    "flaw_type": "missing_constant",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_phys_006_flawless",
+    "problem_id": "prob_phys_006",
+    "model_id": "gemma4",
+    "steps": [
+      "Kinetic energy is the energy an object possesses due to its motion.",
+      "The formula is KE = (1/2)mv².",
+      "Where m is mass and v is velocity.",
+      "So the algebraic relation is (1/2) * m * v²."
+    ],
+    "final_answer": "(1/2) * m * v**2",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_chart_fa_001_flaw",
+    "problem_id": "prob_chart_fa_001",
+    "model_id": "gemma4",
+    "steps": [
+      "The Force vs Acceleration plot is a straight line through the origin.",
+      "Slope = Mass. Pick two points from the graph.",
+      "At a = 2 m/s², F = 5 N. At a = 6 m/s², F = 15 N.",
+      "Slope = (15 - 5) / (6 - 2) = 10 / 4 = 2.0 kg.",
+      "The mass is 2.0 kg."
+    ],
+    "final_answer": "2.0 kg",
+    "is_final_correct": false,
+    "first_flaw_index": 3,
+    "flaw_type": "misread_graph",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_chart_fa_001_flawless",
+    "problem_id": "prob_chart_fa_001",
+    "model_id": "gemma4",
+    "steps": [
+      "From the Force vs Acceleration plot, read the slope (mass = F/a).",
+      "At a = 4 m/s², F = 10 N.",
+      "Mass = F/a = 10/4 = 2.5 kg.",
+      "The hatchling armor mass is 2.5 kg."
+    ],
+    "final_answer": "2.5 kg",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_chart_en_001_flaw",
+    "problem_id": "prob_chart_en_001",
+    "model_id": "gemma4",
+    "steps": [
+      "Look at the Energy Transformation bar chart.",
+      "Read the bar heights for each category.",
+      "The Kinetic Energy bar reads approximately 300 Joules.",
+      "The category with exactly 300 J is Kinetic."
+    ],
+    "final_answer": "Kinetic",
+    "is_final_correct": false,
+    "first_flaw_index": 2,
+    "flaw_type": "misread_graph",
+    "truth_source": "checker"
+  },
+  {
+    "id": "trace_chart_en_001_flawless",
+    "problem_id": "prob_chart_en_001",
+    "model_id": "gemma4",
+    "steps": [
+      "Examine the Energy Transformation bar chart carefully.",
+      "Read each bar: Kinetic ≈ 500 J, Potential ≈ 300 J, Thermal ≈ 200 J.",
+      "The category with exactly 300 Joules is Potential.",
+      "The answer is Potential."
+    ],
+    "final_answer": "Potential",
+    "is_final_correct": true,
+    "first_flaw_index": null,
+    "flaw_type": null,
+    "truth_source": "checker"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "prob_logic_001",
+    "subject": "logic",
+    "difficulty": "easy",
+    "statement": "All cats are animals. Some animals are pets. Can we conclude that all cats are pets?",
+    "image_path": null,
+    "answer_key": "No",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_logic_002",
+    "subject": "logic",
+    "difficulty": "medium",
+    "statement": "A dragon always lies on Mondays and tells the truth on all other days. On what day would a dragon say 'Yesterday I lied' and be telling the truth?",
+    "image_path": null,
+    "answer_key": "Tuesday",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_logic_003",
+    "subject": "probability",
+    "difficulty": "medium",
+    "statement": "A fair six-sided die is rolled twice. What is the probability that the sum of the two rolls is 7?",
+    "image_path": null,
+    "answer_key": "1/6",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_logic_004",
+    "subject": "logic",
+    "difficulty": "easy",
+    "statement": "If it is raining, then the ground is wet. The ground is wet. Can we conclude it is raining?",
+    "image_path": null,
+    "answer_key": "No",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_logic_005",
+    "subject": "probability",
+    "difficulty": "hard",
+    "statement": "A bag contains 5 red balls and 3 blue balls. Two balls are drawn without replacement. What is the probability that both are red?",
+    "image_path": null,
+    "answer_key": "5/14",
+    "checker_type": "exact",
+    "split": "play",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_logic_gold_001",
+    "subject": "logic",
+    "difficulty": "easy",
+    "statement": "If A implies B, and B implies C, does A imply C?",
+    "image_path": null,
+    "answer_key": "Yes",
+    "checker_type": "exact",
+    "split": "gold",
+    "license": "CC0-1.0",
+    "source": "original"
+  },
+  {
+    "id": "prob_logic_gold_002",
+    "subject": "probability",
+    "difficulty": "medium",
+    "statement": "A coin is tossed 3 times. What is the probability of getting exactly 2 heads?",
+    "image_path": null,
+    "answer_key": "3/8",
+    "checker_type": "exact",
+    "split": "gold",
+    "license": "CC0-1.0",
+    "source": "original"
+  }
+]
